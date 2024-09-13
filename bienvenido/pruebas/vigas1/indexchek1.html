@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Área de Acero para Vigas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <div class="container">
+        <h1>Cálculo de Área de Acero para Vigas</h1>
+        <form id="calculationForm">
+            <h2>  - </h2>
+            <h2>  - </h2>
+            <h2>  - </h2>
+
+
+            <h2>PASO1</h2>
+            <h2>   </h2>
+            <h2>   </h2>
+            <h2>   </h2>
+            <h2>PASO1</h2>
+
+            <h2>Cálculo de Área de Acero para Vigas</h2>
+            
+
+        
+
+            <label for="wv">Ingrese el valor de carga distribuida a la que se somete la viga (kgf/m):</label>
+            <input type="number" id="wv" step="0.01" required>
+            <label for="fc">Ingrese el valor de f'c en kgf/cm²:</label>
+            <input type="number" id="fc" step="0.01" required>
+            <label for="fy">Ingrese el valor de fy en kgf/cm²:</label>
+            <input type="number" id="fy" step="0.01" required>
+
+            <label for="b">Ingrese el valor de la base en cm de la viga según NSR-10:</label>
+            <input type="number" id="b" step="0.01" required>
+
+            <label for="h">Ingrese el valor de h en cm según las tablas NSR-10:</label>
+            <input type="number" id="h" step="0.01" required>
+
+            <label for="l">Ingrese el valor de la luz de la viga en m:</label>
+            <input type="number" id="l" step="0.01" required>
+
+            <label for="n">Ingresa el valor de n:</label>
+            <input type="number" id="n" step="0.01" required>
+
+            <button type="button" id="calculateBtn">Calcular</button>
+        </form>
+
+        <div id="result" class="result">
+            <h2>Resultados</h2>
+            <p id="muResult"></p>
+            <p id="jResult"></p>
+            <p id="roResult"></p>
+            <p id="roBalResult"></p>
+            <p id="roMaxResult"></p>
+            <p id="kResult"></p>
+            <p id="finalRecommendation"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

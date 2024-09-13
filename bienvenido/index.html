@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Acero para Vigas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conversiones.html">Conversiones</a></li>
+                <li class="dropdown">
+                    <a href="#">Calculos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="barras.html">Barras</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                
+
+                <li class="dropdown">
+                    <a href="#">Teoría</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Vigas T</a></li>
+                        <li><a href="vigas.html">Vigas</a></li>
+                    </ul>
+                </li>
+                <li class="logout"><a href="../php/cerrar_sesion.php">Cerrar sesión</a></li>
+
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <div class="banner">
+            <img src="vigas.jpg" alt="banner">
+        </div>
+        <div class="content">
+            <div class="section-container">
+                <div class="section-content">
+                    <h2> </h2>
+                    <div class="section">
+                        <h2>Sobre el Programa</h2>
+                        <p>Este pagina ha sido diseñada por un estudiante de ingeniería civil para agilizar los diferentes cálculos para reemplazar la herramienta Excel. Este espacio  facilita el cálculo del acero requerido en vigas, permitiendo a los estudiantes realizar estos cálculos de manera más rápida y precisa.</p>
+                    </div>
+                    <h2> </h2>
+                    <div class="section">
+                        <h2>Importancia del Concreto Armado</h2>
+                        <p>El concreto armado es fundamental en la construcción moderna debido a su resistencia y durabilidad. La combinación de concreto y acero permite la creación de estructuras fuertes que soportan cargas significativas, lo cual es esencial para la seguridad y estabilidad de los edificios y otras infraestructuras.</p>
+                    </div>
+                    <h2> </h2>
+                    <div class="section">
+                        <h2>Beneficios de la pagina</h2>
+                        <p>Además de simplificar el proceso de cálculo, el programa proporciona resultados precisos y permite realizar ajustes y comprobaciones de manera eficiente. Esto ayuda a mejorar la productividad y a reducir errores en el diseño de estructuras.</p>
+                    </div>
+                    <h2> </h2>
+                    <div class="section">
+                        <h2>Normas NSR-10</h2>
+                        <p>De acuerdo con la Norma Sismo Resistente NSR-10, en la construcción de elementos estructurales de concreto reforzado, es esencial garantizar que las secciones transversales de las vigas, columnas y otros elementos estructurales cumplan con las áreas de refuerzo necesarias para resistir las solicitaciones de diseño.<br>
+                                <br>
+                            Para asegurar la correcta implementación de estas exigencias normativas en un software de cálculo de combinaciones de barras de refuerzo, es fundamental que el programa cumpla con los siguientes criterios:</p>
+                          
+                                
+                                <ul><br>
+                                    <li><strong>1.</strong> Determinación del Área de Refuerzo Requerida</li>
+                                    <li><strong>2.</strong> Selección de Combinaciones de Barras.</li>
+                                    <li><strong>3.</strong> Verificación de Condiciones de Separación.</li>
+                                </ul>
+                        
+                    </div>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        
+                        <label for="codigo">Código Estudiantil:</label>
+                        <input type="text" id="codigo" name="codigo" required>
+                        
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                        
+                        <label for="carrera">Carrera:</label>
+                        <input type="text" id="carrera" name="carrera" required>
+                        
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

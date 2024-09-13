@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conversiones.html">Conversiones</a></li>
+                <li class="dropdown">
+                    <a href="#">Calculos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="barras.html">Barras</a></li>
+                        <li><a href="#">Areas</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Teoría</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Vigas T</a></li>
+                        <li><a href="vigas.html">Vigas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Conversiones</h1>
+        <p>En esta sección encontrarás herramientas para realizar conversiones entre diferentes unidades utilizadas en ingeniería civil, especialmente en el cálculo y diseño de estructuras. Estas conversiones te permitirán trabajar con mayor precisión y adaptabilidad según los sistemas de unidades que utilices en tus proyectos.</p>
+        
+        <div class="image-row">
+            <figure>
+                <img src="conversion.jpg" alt="Conversión de Unidades">
+                <figcaption>Sistemas de medida </figcaption>
+            </figure>
+            <figure>
+                <img src="prefijos.jpg" alt="Diámetros de Barras">
+                <figcaption>Prefijos unidades</figcaption>
+            </figure>
+        </div>
+
+        <h2>Conversión de Unidades</h2>
+        <!-- Unidades  -->
+<!-- Unidades -->
+<div class="content">
+    <div class="sections-row">
+        <div class="section">
+            <h2>Slug a kg</h2>
+            <p>1 Slug = 14.5939 Kg</p>
+        </div>
+        <div class="section">
+            <h2>KSI a MPa</h2>
+            <p>1 KSI = 6.895 MPa</p>
+        </div>
+        <div class="section">
+            <h2>Pa a N/m²</h2>
+            <p>1 Pa = 1 N/m²</p>
+        </div>
+    </div>
+    <div class="sections-row">
+        <div class="section">
+            <h2>PSI a Pa</h2>
+            <p>1 PSI = 6894.76 Pa</p>
+        </div>
+        <div class="section">
+            <h2>MPa a kgf/cm²</h2>
+            <p>1 MPa = 10.1972 kgf/cm²</p>
+        </div>
+        <div class="section">
+            <h2>Pascales a kgf</h2>
+            <p>1 Pa = 1.01972 x 10<sup>-5</sup> kgf</p>
+        </div>
+    </div>
+    <div class="sections-row">
+        <div class="section">
+            <h2>PSI a otras unidades</h2>
+            <p>1 PSI = 0.07031 kgf/cm² = 6894.76 Pa</p>
+        </div>
+    </div>
+
+
+<!-- Conversiones primera conversion de Mpa a Kgf/cm² -->
+        <h2>Conversión de MPa a Kgf/cm²</h2>
+        <div class="conversion">
+            <form id="mpaForm">
+                <label for="mpaInput">Ingrese MPa:</label>
+                <input type="number" id="mpaInput" required>
+                <button type="submit">Convertir</button>
+            </form>
+            <p id="mpaResult"></p> <!-- Casilla donde se mostrará el resultado -->
+        </div>
+         <!-- Segunda conversión: Pascales a kgf -->
+         <h2>Conversión de Pascales a kgf</h2>
+         <div class="conversion">
+             <form id="pascalForm">
+                 <label for="pascalInput">Ingrese Pascales:</label>
+                 <input type="number" id="pascalInput" required>
+                 <button type="submit">Convertir</button>
+             </form>
+             <p id="pascalResult"></p>
+         </div>
+ 
+         <!-- Tercera conversión: PSI a otras unidades -->
+         <h2>Conversión de PSI a kgf/cm² y a Pa</h2>
+         <div class="conversion">
+             <form id="psiForm">
+                 <label for="psiInput">Ingrese PSI:</label>
+                 <input type="number" id="psiInput" required>
+                 <button type="submit">Convertir</button>
+             </form>
+             <p id="psiResult"></p>
+         </div>
+
+         <!-- Cuarta conversión: Ton/m a Kgf/cm y a PSI-->
+          <H2>Conversión de Ton-m a Kgf-cm </H2>
+          <div class=" conversion">
+            <form id="tonFrom">
+                <label for="tonFrom">Ingrese Ton/m: </label>
+                <input type="number" id="tonInput" required>
+                <button type="submit">Convertir</button>
+            </form>
+            <p id="tonResult"></p>
+          </div>
+        
+
+
+    </div>
+
+    <script src="scripts.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

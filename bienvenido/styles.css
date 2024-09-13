@@ -1,0 +1,269 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente del texto en toda la página */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
+    background-color: #f4f4f4; /* Establece el color de fondo de la página */
+}
+
+/* -- Header y Navegación -- */
+header {
+    background-color: #333; /* Color de fondo del header */
+    padding: 10px 0; /* Espaciado superior e inferior del header */
+    color: white; /* Color del texto en el header */
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 0; /* Elimina el padding predeterminado de las listas */
+    margin: 0; /* Elimina el margen predeterminado de las listas */
+    text-align: center; /* Centra el texto en la lista */
+}
+
+nav ul li {
+    display: inline-block; /* Muestra los elementos de la lista en línea */
+    position: relative; /* Permite posicionar los elementos hijos absolutamente dentro de este contenedor */
+    margin: 0 15px; /* Margen horizontal entre los elementos de la lista */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    display: block; /* Hace que el enlace ocupe el bloque completo */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Color de fondo de los enlaces al pasar el ratón por encima */
+}
+
+.dropdown-content {
+    display: none; /* Oculta el contenido desplegable por defecto */
+    position: absolute; /* Posiciona el contenido desplegable absolutamente respecto al contenedor padre */
+    background-color: #333; /* Color de fondo del contenido desplegable */
+    min-width: 160px; /* Ancho mínimo del contenido desplegable */
+    z-index: 1; /* Asegura que el contenido desplegable esté sobre otros elementos */
+}
+
+.dropdown-content li {
+    display: block; /* Muestra los elementos de la lista en bloque */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.dropdown-content li a {
+    padding: 10px 15px; /* Espaciado interno de los enlaces en el contenido desplegable */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Muestra el contenido desplegable cuando se pasa el ratón por encima del contenedor desplegable */
+}
+
+
+/* -- Estilos para index.html -- */
+
+/* Contenedor principal */
+.container {
+    width: 80%; /* Ancho del contenedor al 80% del contenedor padre */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Banner */
+.banner {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 60vh; /* Altura del banner al 50% de la altura de la ventana */
+    overflow: hidden; /* Oculta cualquier contenido que desborde el banner */
+}
+
+.banner img {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Mantiene la proporción de la altura de la imagen */
+    transform: translateY(0%); /* Ajuste vertical de la imagen */
+}
+
+/* Secciones de contenido */
+.section-container {
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: space-between; /* Espacia los elementos en el contenedor */
+    gap: 30px; /* Espacio entre los elementos */
+    margin-bottom: 20px; /* Margen inferior del contenedor de secciones */
+}
+
+.section-content {
+    flex: 2; /* Define el tamaño relativo del contenedor de contenido */
+}
+
+.section {
+    background-color: rgba(229, 250, 205, 0.506); /* Color de fondo con opacidad */
+    padding: 15px; /* Espaciado interno del contenedor de sección */
+    border-radius: 15px; /* Redondea las esquinas del contenedor de sección */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+    margin-bottom: 20px; /* Margen inferior de las secciones */
+}
+
+/* Formulario */
+.form-container {
+    flex: 1; /* Permite que el contenedor se ajuste y tome el espacio disponible en el diseño con flexbox */
+    max-width: 300px; /* Ancho máximo del formulario */
+    padding: 15px; /* Espaciado interno del formulario */
+    background-color: #fff; /* Color de fondo del formulario */
+    border-radius: 15px; /* Redondea las esquinas del formulario */
+    height: 400px; /* Altura del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+}
+
+.form-container form {
+    display: flex; /* Usa flexbox para el diseño del formulario */
+    flex-direction: column; /* Dispone los elementos del formulario en una columna */
+}
+
+.form-container form label {
+    margin: 10px 0 5px; /* Margen superior e inferior de las etiquetas del formulario */
+}
+
+.form-container form input {
+    padding: 8px; /* Espaciado interno de los campos de entrada */
+    margin-bottom: 10px; /* Margen inferior de los campos de entrada */
+    border: 1px solid #ccc; /* Borde delgado y gris claro alrededor de los campos de entrada */
+    border-radius: 4px; /* Redondea las esquinas de los campos de entrada */
+}
+
+.form-container form input[type="submit"] {
+    background-color: #333; /* Color de fondo del botón de envío */
+    color: #fff; /* Color del texto del botón de envío */
+    border: none; /* Elimina el borde del botón de envío */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón de envío */
+}
+
+.form-container form input[type="submit"]:hover {
+    background-color: #555; /* Color de fondo del botón de envío al pasar el ratón por encima */
+}
+
+/* -- Estilos para conversiones.html -- */
+
+/* Sección de imágenes */
+.image-row {
+    display: flex; /* Usa flexbox para el diseño de las imágenes */
+    justify-content: space-between; /* Espacia las imágenes */
+    margin: 20px 0; /* Margen superior e inferior de la sección de imágenes */
+}
+
+.image-row figure {
+    width: 48%; /* Ancho de cada figura al 48% del contenedor padre */
+    margin: 0; /* Elimina el margen de las figuras */
+    text-align: center; /* Centra el texto de la figura */
+}
+
+.image-row img {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Mantiene la proporción de la altura de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a las imágenes */
+}
+
+.image-row figcaption {
+    margin-top: 8px; /* Margen superior del pie de foto */
+    font-style: italic; /* Estilo de fuente en cursiva */
+    color: #555; /* Color del texto del pie de foto */
+}
+
+/* Conversión */
+.conversion {
+    background-color: #db0d0d1e; /* Color de fondo de la sección de conversión con opacidad */
+    padding: 15px; /* Espaciado interno de la sección de conversión */
+    border-radius: 5px; /* Redondea las esquinas de la sección de conversión */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+    margin-bottom: 20px; /* Margen inferior de la sección de conversión */
+}
+
+.conversion h3 {
+    margin-top: 0; /* Elimina el margen superior del encabezado en la sección de conversión */
+}
+
+.conversion form {
+    margin-top: 10px; /* Margen superior del formulario en la sección de conversión */
+    margin-bottom: 10px; /* Margen inferior del formulario en la sección de conversión */
+}
+
+.conversion label {
+    display: block; /* Muestra las etiquetas en bloque */
+    margin-bottom: 5px; /* Margen inferior de las etiquetas */
+}
+
+.conversion input[type="number"] {
+    padding: 5px; /* Espaciado interno de los campos de número */
+    width: 80%; /* Ancho del campo de número al 80% del contenedor */
+    margin-bottom: 10px; /* Margen inferior del campo de número */
+}
+
+.conversion button {
+    padding: 5px 10px; /* Espaciado interno del botón */
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.conversion button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón por encima */
+}
+
+/* Contenedor de filas de secciones */
+.sections-row {
+    display: flex; /* Usa flexbox para organizar las secciones en una fila */
+    justify-content: space-between; /* Espacia las secciones igualmente a lo largo de la fila */
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Sección individual dentro de la fila */
+.section {
+    flex: 1; /* Permite que las secciones se expandan igualmente dentro de la fila */
+    margin: 0 10px; /* Margen horizontal entre secciones */
+    background-color: rgba(229, 250, 205, 0.506); /* Color de fondo con opacidad */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total de la sección */
+}
+
+/* Asegúrate de que las secciones no se desborden en pantallas pequeñas */
+@media (max-width: 768px) {
+    .sections-row {
+        flex-direction: column; /* Cambia la dirección de la fila a columna en pantallas pequeñas */
+    }
+
+    .section {
+        margin-bottom: 20px; /* Margen inferior en pantallas pequeñas */
+    }
+}
+/* Botton cerrar sesión */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinea los menús a la izquierda */
+    gap: 20px; /* Añade espacio entre los elementos del menú */
+}
+
+/* Aplica márgenes para "Cerrar sesión" */
+nav ul .logout {
+    margin-left: auto; /* Empuja "Cerrar sesión" hacia la derecha */
+}
+
+/* Estilos del enlace "Cerrar sesión" */
+.logout a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Fondo rojo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout a:hover {
+    background-color: #cc0000; /* Cambia el fondo al pasar el mouse */
+}

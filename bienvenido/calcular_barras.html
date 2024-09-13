@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Barras de Acero</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        #options {
+            margin-top: 10px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <h1>Calculadora de Barras de Acero</h1>
+            <div class="container">
+                <div class="image-row">
+                    <img src="bre.jpg" alt="image-row">
+                </div>
+            </div>
+            <label for="areaInput">Ingrese el área de acero requerida en cm²:</label>
+            <input type="number" id="areaInput" placeholder="Área en cm²" min="0" step="any">
+            <button onclick="calcular()">Calcular</button>
+                   
+            <div id="options"></div>
+            <div id="results"></div>
+        </div>
+       
+    </div>
+  
+
+</body>
+</html>

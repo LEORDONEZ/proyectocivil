@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras</title>
+    
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conversiones.html">Conversiones</a></li>
+                <li class="dropdown">
+                    <a href="#">Calculos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="barras.html">Barras</a></li>
+                        <li><a href="#">Áreas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Teoría</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Vigas T</a></li>
+                        <li><a href="vigas.html">Vigas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="banner">
+            <img src="barras1.jpg" alt="banner">
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Cálculo de Acero en Vigas</h1>
+        <h2>Descripción General</h2>
+
+        <p>Este programa está diseñado para ayudar en la selección de la combinación adecuada de barras de acero para vigas,
+             cumpliendo con la norma NSR-10. El usuario puede ingresar el área de acero requerida, y el programa calculará 
+             la combinación óptima de barras, asegurando que se cumpla la base mínima requerida para la viga. Además, 
+            se ofrece una tabla con datos detallados de las barras disponibles, incluyendo diámetro, área y peso.</p>
+        <h2> Funcionalidades Clave</h2>
+        <ul>
+            <li><strong>Ingreso de Área de Acero Requerida:</strong>
+                <ul><br>
+                    <li>El usuario introduce el área de acero necesario para la viga.</li>
+                    <li>El programa utiliza esta información para calcular la combinación adecuada de barras.</li>
+                </ul>
+            </li><br>
+            <li><strong>Cálculo de Combinaciones de Barras:</strong>
+                <ul><br>
+                    <li>Basado en el área de acero requerido, el programa determina la mejor combinación de barras de acero disponibles.</li>
+                    <li>Se asegura de que la combinación elegida cumpla con la base requerida de la viga según la norma NSR-10.</li><br>
+                </ul>
+            </li>
+            <li><strong>Verificación de Cumplimiento de Base:</strong>
+                <ul><br>
+                    <li>El programa verifica que la combinación de barras seleccionada cumpla con la base mínima necesaria para la viga, según las especificaciones de la norma NSR-10.</li>
+                </ul><br>
+            </li>
+            <li><strong>Tabla de Datos de Barras:</strong>
+                <div class="image-row">
+                    <figure>
+                        <img src="barras.jpg" alt="Conversión de Unidades">
+                        <figcaption>Tabla de barras </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="bre.jpg" alt="Brequerido">
+                        <figcaption>base minima requerida</figcaption>
+                    </figure>
+                </div>
+        
+                
+                <ul><br>
+                    <li>Una imagen detallada muestra todas las barras de acero disponibles, incluyendo:</li>
+                    <ul><br>
+                        <li><strong>Diámetro:</strong> El diámetro de cada tipo de barra.</li>
+                        <li><strong>Área:</strong> El área de acero de cada barra.</li>
+                        <li><strong>Peso:</strong> El peso de cada barra.</li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+        <h1>Calculadora de Acero</h1>
+        <div class="container">
+            <h2>Calculadora de Barras</h2>
+            <p>Haz clic en el botón a continuación para acceder a la calculadora de barras.</p>
+            <button onclick="window.location.href='calcular_barras.html';">Ir a Calculadora de Barras</button><br>
+            <br>
+            <br>
+            <br>
+        </div>
+        
+    </div>
+</body>
+</html>

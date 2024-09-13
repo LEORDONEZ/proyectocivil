@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Vigas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"], input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo de Vigas</h1>
+        <label for="f_c">f_c (Kgf/cm²):</label>
+        <input type="number" id="f_c" step="0.01">
+
+        <label for="fs">fs (Kgf/cm²):</label>
+        <input type="number" id="fs" step="0.01">
+
+        <label for="n">n:</label>
+        <input type="number" id="n" step="0.01">
+
+        <label for="luz">Luz (m):</label>
+        <input type="number" id="luz" step="0.01">
+
+        <label for="b">b (cm):</label>
+        <input type="number" id="b" step="0.01">
+
+        <label for="h">h (cm):</label>
+        <input type="number" id="h" step="0.01">
+
+        <label for="w">Carga distribuida (kgf/m):</label>
+        <input type="number" id="w" step="0.01">
+
+        <label for="j">Valor de j (supuesto):</label>
+        <input type="number" id="j" step="0.01">
+
+        <label for="diametro">Diámetro de la varilla (cm):</label>
+        <input type="number" id="diametro" step="0.01">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            const f_c = parseFloat(document.getElementById("f_c").value);
+            const fs = parseFloat(document.getElementById("fs").value);
+            let Fc = f_c * 0.5;
+
+            let Ec = 4700 * Math.sqrt(f_c / 10);
+            Ec *= 10;
+            let n = parseFloat(document.getElementById("n").value) || 2000000 / Ec;
+
+            const Luz = parseFloat(document.getElementById("luz").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const h = parseFloat(document.getElementById("h").value);
+            let w = parseFloat(document.getElementById("w").value);
+
+            // Calcula el momento último (Mu)
+            let Mu = (w * Luz * Luz) / 8;
+            Mu *= 100;
+
+            // Calcula d
+            let d = h - 4 - 1 - 0.95;
+            d = Math.floor(d);
+
+            let j = parseFloat(document.getElementById("j").value);
+            let As = Mu / (fs * j * d);
+
+            let ro = As / (b * d);
+
+            let k = -n * ro + Math.sqrt(n * (ro ** 2) + 2 * n * ro);
+            let jcalculado = 1 - k / 3;
+
+            const diametro = parseFloat(document.getElementById("diametro").value);
+
+            d = h - 4 - (diametro / 2) - 0.95;
+            d = Math.floor(d);
+
+            As = Mu / (fs * j * d);
+            ro = As / (b * d);
+
+            const r = fs / Fc;
+            const kb = n / (n + r);
+            const rob = kb / (2 * r);
+
+            jcalculado = 1 - k / 3;
+
+            const Ms = j * d * As * fs;
+            const Mc = (Fc / 2) * k * d * d * b;
+
+            const Mmn = Math.min(Ms, Mc);
+            const Wmax = (8 * Mmn) / ((Luz * 100) ** 2);
+
+            document.getElementById("result").innerHTML = `
+                <strong>Resultados:</strong><br>
+                Valor de d: ${d} cm<br>
+                Valor de As: ${As.toFixed(2)} cm²<br>
+                Valor de ro: ${ro.toFixed(4)}<br>
+                Valor de k: ${k.toFixed(4)}<br>
+                Valor de Ms: ${Ms.toFixed(2)} Kgf/cm²<br>
+                Valor de Mc: ${Mc.toFixed(2)} Kgf/cm²<br>
+                La viga soporta ${Wmax.toFixed(2)} kgf/cm con un área de acero de ${As.toFixed(2)} cm²<br>
+                La viga soporta ${Wmax.toFixed(2) * 100} kgf/m con un área de acero de ${As.toFixed(2)} cm²
+            `;
+        }
+    </script>
+</body>
+</html>
