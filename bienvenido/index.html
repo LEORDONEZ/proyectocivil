@@ -75,19 +75,22 @@
                     </div>
                 </div>
                 <div class="form-container">
-                    <form>
+                    <form action="guardar_sugerencia.php" method="POST">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
-                        
+                    
                         <label for="codigo">Código Estudiantil:</label>
                         <input type="text" id="codigo" name="codigo" required>
-                        
+                    
                         <label for="ciudad">Ciudad:</label>
                         <input type="text" id="ciudad" name="ciudad" required>
-                        
+                    
                         <label for="carrera">Carrera:</label>
                         <input type="text" id="carrera" name="carrera" required>
-                        
+                    
+                        <label for="sugerencia">Sugerencia:</label>
+                        <textarea id="sugerencia" name="sugerencia" rows="4" cols="50" placeholder="Escribe tu sugerencia aquí..." required></textarea>
+                    
                         <input type="submit" value="Enviar">
                     </form>
                 </div>
